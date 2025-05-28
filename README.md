@@ -65,25 +65,6 @@ Berikut adalah deskripsi dari masing-masing fitur (variabel) dalam dataset `Weat
 | `Location`                   | Jenis lokasi tempat pengamatan dilakukan (misal: inland, coastal, mountain).    |
 | `Weather Type `              |  Variabel target untuk klasifikasi, menunjukkan jenis cuaca seperti Sunny, Rainy, Cloudy, dsb.    |
 
-## Data cleaning
-  Pembersihan data dilakukan untuk menghapus outlier pada fitur numerik yang dapat mempengaruhi performa model. Metode yang digunakan adalah IQR (Interquartile Range), yang menghilangkan nilai-nilai ekstrem di bawah Q1 - 1.5IQR dan di atas Q3 + 1.5IQR.
-```python
-df_cleaned = df.copy()
-
-numerical_cols = df_cleaned.select_dtypes(include=np.number).columns
-
-for col in numerical_cols:
-    Q1 = df_cleaned[col].quantile(0.25)
-    Q3 = df_cleaned[col].quantile(0.75)
-    IQR = Q3 - Q1
-    lower_bound = Q1 - 1.5 * IQR
-    upper_bound = Q3 + 1.5 * IQR
-    df_cleaned = df_cleaned[(df_cleaned[col] >= lower_bound) & (df_cleaned[col] <= upper_bound)]
-
-print(f"Original number of rows: {len(df)}")
-print(f"Number of rows after outlier removal: {len(df_cleaned)}")
-```
-Langkah ini memastikan bahwa model tidak dilatih dengan data ekstrim yang dapat mengganggu generalisasi
 
 ### Exploratory Data Analysis 
 1. Informasi dataset
