@@ -18,7 +18,7 @@ from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score,roc_auc_score
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
-
+from IPython.display import display
 """## Data loading"""
 
 df = pd.read_csv("weather_classification_data.csv")
