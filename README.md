@@ -85,7 +85,7 @@ Berikut adalah deskripsi dari masing-masing fitur (variabel) dalam dataset `Weat
     - Tidak terdapat nilai kosong.
 
 2. Histograms for numerical features
-   <br>![Numerical](img/Histograms_numerical_features.png/)
+   <br>![Numerical](img/Histograms_numerical_features.png)
    <br> Berdasarkan histogram tersebut, dapat diambil info bahwa dalam Humidity agak codong ke kanan dengan persebaran data antara 60% - 90% menandakan kelembaban yang tinggi.
    Dari Precipitation dilihat distribusi multimodal dan tidak merata, yang awalnya tidak ada hujan tiba-tiba melonjak dengan level tinggi. Kemudian dari Visibility terdapat pola bimodal yang cukup jelas, dapat digunakan unutk mendeteksi cuaca buruk. Dari cerminan ketiga data tersebut dapat diambil kesimpulan kemungkinan variabel tersebut sangat penting untuk klasifikasi cuaca. 
 
@@ -217,7 +217,7 @@ $$
 | **Gradient Boosting** | 0.9905     | 0.9898     | 0.9734     | 0.9815     |
 | **SVM**               | 0.9927     | 0.9834     | **0.9884** | 0.9859     |
 
-**Hasil Confusion Matrix **
+**Hasil Confusion Matrix**
 | Model          | TP      | TN   | FP | FN    | Total Error |
 | -------------- | ------- | ---- | -- | ----- | ----------- |
 | KNN            | 574     | 1701 | 16 | 27    | 43          |
