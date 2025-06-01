@@ -97,7 +97,7 @@ Berikut adalah deskripsi dari masing-masing fitur (variabel) dalam dataset `Weat
 ## Data Preparation
 Telah dilakukab pembersihan data dengan penanganan missing value dan penanganan outliner. Selanjutnya data dipersipakan untuk melakukan pelatihan model, pada langkah ini dilakukan labelEncoder, Scaling, dan Spliting. 
 
-1. LabelEncoder
+1. One-hot encoding
 ```python
 categorical_cols = df_cleaned.select_dtypes(include='object').columns
 df_processed = pd.get_dummies(df_cleaned, columns=categorical_cols, drop_first=True, dummy_na=False)
@@ -116,11 +116,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_
 
 3. Scaling 
 ```python
-# Kolom numerik
 numerical_cols = ['Temperature', 'Humidity', 'Wind Speed', 'Precipitation (%)',
                   'Atmospheric Pressure', 'UV Index', 'Visibility (km)']
 
-# Inisialisasi scaler dan fit ke X_train
 scaler = StandardScaler()
 X_train_scaled = X_train.copy()
 X_test_scaled = X_test.copy()
