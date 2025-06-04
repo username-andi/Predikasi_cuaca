@@ -95,7 +95,7 @@ Berikut adalah deskripsi dari masing-masing fitur (variabel) dalam dataset `Weat
 
 
 ## Data Preparation
-Telah dilakukab pembersihan data dengan penanganan missing value dan penanganan outliner. Selanjutnya data dipersipakan untuk melakukan pelatihan model, pada langkah ini dilakukan labelEncoder, Scaling, dan Spliting. 
+Telah dilakukab penanganan outliner. Selanjutnya data dipersipakan untuk melakukan pelatihan model, pada langkah ini dilakukan One-hot encoding, Scaling, dan Spliting. 
 
 1. One-hot encoding
 ```python
